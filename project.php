@@ -1,3 +1,5 @@
+// DO NOT EDIT NOTHING HERE -- TKS, ALISSON.
+
 {
   "settings": {
     "name": "Alisson Pelizaro",
