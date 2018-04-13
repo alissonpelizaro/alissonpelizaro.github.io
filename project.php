@@ -2,8 +2,8 @@
 
 {
   "settings": {
-    "name": "Alisson Pelizaro",
-    "currentPage": "contato.html",
+    "name": "Alisson Pelizaro", // You can change it
+    "currentPage": "contato.html", // You can change it
     "versionFirst": "4.0.14",
     "uniqCompNum": 70,
     "versionPublish": "4.6.5",
@@ -55,8 +55,8 @@
     "index.html": {
       "settings": {
         "main": true,
-        "title": "Início | Alisson Pelizaro",
-        "meta_descr": "Página pessoal de Alisson Pelizaro. Apenas mais um desenvolvedor de Curitiba.",
+        "title": "Início | Alisson Pelizaro",// You can change it
+        "meta_descr": "Página pessoal de Alisson Pelizaro. Apenas mais um desenvolvedor de Curitiba.",// You can change it
         "header_custom": "",
         "footer_custom": "",
         "html_before": ""
