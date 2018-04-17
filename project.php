@@ -371,6 +371,10 @@
               ".btn": {
                 "display": "flex"
               },
+               ".btn-secundary": {
+                "display": "none",
+                "align-content": "center"
+              },
               "button.navbar-toggler": {
                 "display": "block"
               },
