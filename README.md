@@ -43,12 +43,6 @@ O ganho é que o PDF nunca fica defasado: editar o HTML já atualiza o
 download. Para conferir o resultado depois de mexer no conteúdo, abra
 `curriculo.html` e mande imprimir — o preview mostra a paginação real.
 
-## Preencher
-
-| Onde | O que | Estado |
-|---|---|---|
-| `curriculo.html` | `data-fill="element-since"` — ano de fundação da Element | placeholder `Atual` |
-
 ## Publicar no GitHub Pages
 
 **Settings → Pages → Build and deployment**: source `Deploy from a branch`,
