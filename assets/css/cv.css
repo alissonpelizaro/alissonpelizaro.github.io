@@ -1,0 +1,208 @@
+/* ═══════════════════════════════════════════════
+   Alisson Pelizaro — cv.css
+   Página de currículo. Carregada depois de style.css,
+   herda os mesmos tokens. O bloco @media print no fim
+   é o que o botão "Baixar PDF" produz.
+   ═══════════════════════════════════════════════ */
+
+.cvpage{padding:140px 0 clamp(70px,9vw,110px);position:relative;overflow:hidden;isolation:isolate}
+
+/* ── cabeçalho ────────────────────────────────── */
+.cvhead{
+  display:grid;grid-template-columns:minmax(0,1fr) auto;gap:clamp(24px,4vw,48px);
+  align-items:end;
+  padding-bottom:clamp(28px,4vw,40px);
+  border-bottom:1px solid var(--line);
+}
+.cvhead__name{
+  font-family:var(--f-head);
+  font-size:clamp(2.4rem,6vw,4rem);
+  font-weight:700;line-height:1;letter-spacing:-.045em;
+  margin:20px 0 12px;
+}
+.cvhead__role{
+  font-family:var(--f-head);font-size:clamp(16px,2.2vw,20px);font-weight:500;
+  letter-spacing:-.02em;color:var(--txt);
+}
+.cvhead__role b{
+  background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;font-weight:600;
+}
+.cvhead__meta{
+  display:flex;flex-wrap:wrap;gap:6px 20px;margin-top:16px;
+  font-family:var(--f-mono);font-size:12px;color:var(--muted);letter-spacing:.02em;
+}
+.cvhead__meta a:hover{color:var(--c1)}
+.cvhead__meta i{font-style:normal;color:var(--dim)}
+.cvhead__actions{display:flex;flex-direction:column;gap:10px;align-items:flex-end}
+
+/* ── grade ────────────────────────────────────── */
+.cvgrid{
+  display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,.85fr);
+  gap:clamp(32px,5vw,64px);
+  margin-top:clamp(36px,5vw,56px);
+  align-items:start;
+}
+
+.cvsec + .cvsec{margin-top:clamp(32px,4vw,46px)}
+.cvsec__title{
+  font-family:var(--f-mono);font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+  color:var(--c1);margin-bottom:22px;
+  display:flex;align-items:center;gap:10px;
+}
+.cvsec__title::after{content:"";flex:1;height:1px;background:var(--line)}
+
+.cvlead{color:var(--muted);font-size:15.5px;line-height:1.75}
+.cvlead + .cvlead{margin-top:14px}
+.cvlead strong{color:var(--txt);font-weight:500}
+
+/* ── experiência ──────────────────────────────── */
+.jobs{display:flex;flex-direction:column;gap:14px}
+.job{
+  position:relative;
+  padding:26px 26px 24px;border-radius:16px;
+  border:1px solid var(--line);
+  background:linear-gradient(160deg,rgba(255,255,255,.04),rgba(255,255,255,.01));
+  transition:border-color .4s,transform .5s var(--ease-out);
+  break-inside:avoid;
+}
+.job:hover{border-color:rgba(124,92,255,.42)}
+.job__top{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:8px 18px}
+.job__co{font-family:var(--f-head);font-size:19px;font-weight:600;letter-spacing:-.025em}
+.job__when{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;color:var(--c1);white-space:nowrap}
+.job__title{font-size:14.5px;font-weight:500;color:var(--txt);margin-top:4px}
+.job__where{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--dim);margin-top:5px}
+.job__desc{color:var(--muted);font-size:14.5px;line-height:1.68;margin-top:14px}
+.job__list{margin-top:12px;display:flex;flex-direction:column;gap:6px}
+.job__list li{position:relative;padding-left:18px;color:var(--muted);font-size:14px;line-height:1.6}
+.job__list li::before{
+  content:"";position:absolute;left:0;top:.62em;
+  width:6px;height:6px;border-radius:2px;background:var(--grad);
+}
+.job .chips{margin-top:16px}
+
+/* uma vaga com dois cargos na mesma empresa */
+.job__roles{margin-top:14px;display:flex;flex-direction:column;gap:10px;padding-left:16px;border-left:1px solid var(--line)}
+.job__role{display:flex;flex-wrap:wrap;gap:4px 14px;align-items:baseline}
+.job__role b{font-size:14px;font-weight:500}
+.job__role span{font-family:var(--f-mono);font-size:10.5px;color:var(--dim);letter-spacing:.06em}
+
+/* ── aside ────────────────────────────────────── */
+.cvaside{position:sticky;top:96px;display:flex;flex-direction:column;gap:clamp(26px,3vw,36px)}
+
+.skillset{display:flex;flex-direction:column;gap:16px}
+.skillset > div{display:flex;flex-direction:column;gap:8px}
+.skillset dt{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--dim)}
+.skillset dd .chips{margin-top:0}
+
+.plain{display:flex;flex-direction:column;gap:12px}
+.plain li{display:flex;flex-direction:column;gap:2px}
+.plain b{font-family:var(--f-head);font-size:15px;font-weight:600;letter-spacing:-.02em}
+.plain span{font-size:13px;color:var(--muted)}
+.plain em{font-style:normal;font-family:var(--f-mono);font-size:10.5px;color:var(--dim);letter-spacing:.06em}
+
+.certs{display:flex;flex-wrap:wrap;gap:7px}
+.certs li{
+  font-family:var(--f-mono);font-size:10.5px;letter-spacing:.04em;color:var(--muted);
+  padding:6px 11px;border:1px solid var(--line-2);border-radius:8px;background:rgba(255,255,255,.02);
+}
+
+/* ── responsivo ───────────────────────────────── */
+@media (max-width:960px){
+  .cvgrid{grid-template-columns:1fr}
+  .cvaside{position:static}
+  .cvhead{grid-template-columns:1fr;align-items:start}
+  .cvhead__actions{flex-direction:row;align-items:center;justify-content:flex-start}
+}
+
+/* ═══════════════════════════════════════════════
+   IMPRESSÃO — é isto que vira o PDF baixado
+   ═══════════════════════════════════════════════ */
+@page{size:A4;margin:13mm 12mm}
+
+@media print{
+  /* volta ao papel: fundo branco, tinta preta, sem enfeite */
+  :root{
+    --txt:#12141c;
+    --muted:#3f4657;
+    --dim:#6b7385;
+    --line:#c9cede;
+    --line-2:#e2e5ee;
+  }
+  html,body{background:#fff !important;color:var(--txt) !important}
+  body{font-size:9.6pt;line-height:1.46;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+  .nav,.grain,.cursor,.scrollbar,.aurora,.grid-floor,.foot,.skip,
+  .cvhead__actions,.hero__canvas{display:none !important}
+
+  .cvpage{padding:0 !important}
+  .wrap{max-width:none;padding-inline:0}
+
+  a{color:inherit;text-decoration:none}
+
+  /* gradientes em texto não imprimem de forma confiável — voltam a ser cor.
+     Desfazer o background-clip:text junto, senão o recorte continua valendo
+     e o texto sai com o gradiente na impressão. */
+  .grad,.cvhead__role b,.step__n,.hero__stats b,.pin__counter b,.direct b{
+    background:none !important;
+    -webkit-background-clip:border-box !important;background-clip:border-box !important;
+    /* precisa de !important: text-fill-color pinta por cima de `color`, e sem
+       ele o recorte do gradiente sobrevive à impressão */
+    color:#3b2fbf !important;-webkit-text-fill-color:#3b2fbf !important;
+  }
+
+  .cvhead{padding-bottom:9pt;border-bottom:.6pt solid var(--line);gap:0}
+  .cvhead__name{font-size:22pt;margin:0 0 3pt}
+  .cvhead__role{font-size:11pt}
+  .cvhead__meta{font-size:7.6pt;margin-top:6pt;gap:2pt 12pt}
+  .cvhead .brand,.cvhead .tag{display:none}
+
+  .cvgrid{
+    display:grid;grid-template-columns:1.75fr .95fr;gap:14pt;margin-top:11pt;
+  }
+  .cvaside{position:static;gap:12pt}
+
+  .cvsec + .cvsec{margin-top:12pt}
+  .cvsec__title{font-size:7.4pt;letter-spacing:.16em;margin-bottom:7pt;color:#3b2fbf}
+  .cvsec__title::after{background:var(--line);height:.6pt}
+
+  .cvlead{font-size:9.2pt;line-height:1.5}
+
+  .jobs{gap:7pt}
+  .job{
+    padding:8pt 9pt;border:.6pt solid var(--line);border-radius:5pt;
+    background:none !important;break-inside:avoid;page-break-inside:avoid;
+  }
+  .job__co{font-size:11pt}
+  .job__when{font-size:7.6pt;color:#3b2fbf}
+  .job__title{font-size:9.4pt;margin-top:1pt}
+  .job__where{font-size:7pt;margin-top:2pt}
+  .job__desc{font-size:9pt;line-height:1.45;margin-top:5pt}
+  .job__list{margin-top:4pt;gap:1.5pt}
+  .job__list li{font-size:8.8pt;padding-left:9pt;line-height:1.42}
+  .job__list li::before{width:3pt;height:3pt;border-radius:.8pt;background:#3b2fbf}
+  .job__roles{margin-top:5pt;padding-left:7pt;gap:3pt;border-left:.6pt solid var(--line)}
+  .job__role b{font-size:8.8pt}
+  .job__role span{font-size:7.2pt}
+
+  .chips{gap:2.5pt;margin-top:5pt}
+  .chips li,.certs li{
+    font-size:7.2pt;padding:1.5pt 4pt;border:.5pt solid var(--line);border-radius:2.5pt;
+    background:none !important;color:var(--muted);
+  }
+  .certs{gap:2.5pt}
+
+  .skillset{gap:7pt}
+  .skillset > div{gap:3pt}
+  .skillset dt{font-size:7pt}
+
+  .plain{gap:5pt}
+  .plain b{font-size:9.2pt}
+  .plain span{font-size:8.4pt}
+  .plain em{font-size:7.2pt}
+
+  /* Só as seções curtas do aside são mantidas inteiras numa página. Aplicar
+     isso em .cvsec empurrava "Experiência" inteira para a página 2 — ela não
+     cabe no resto da página 1 — e deixava metade da primeira página vazia.
+     Na coluna principal quem não pode partir é cada .job, não a seção. */
+  .cvaside .cvsec{break-inside:avoid-page}
+}
